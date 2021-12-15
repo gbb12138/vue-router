@@ -1,9 +1,7 @@
-export function createRouteMap (routes) {
-    let pathMap = {};
+export function createRouteMap (routes, pathMap = {}) {
     routes.forEach(route => {
         addRouteRecord(route, pathMap)
     })
-    console.log(pathMap, 555)
     return {
         pathMap
     }

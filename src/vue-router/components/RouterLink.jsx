@@ -4,7 +4,10 @@ export default {
         to: String
     },
     render(createElement, context) {
+        const handler = () => {
+            this.$router.push(this.to)
+        }
         // 通过this.$slots拿到插槽
-        return <a>{this.$slots.default}</a>
+        return <a onClick={handler}>{this.$slots.default}</a>
     }
 }
