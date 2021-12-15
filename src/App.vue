@@ -7,7 +7,14 @@
     <router-view/>
   </div>
 </template>
-
+<script>
+export default {
+  name: 'APP',
+  mounted() {
+    console.log(this._routerRoot._router, 111)
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
